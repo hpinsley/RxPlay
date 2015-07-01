@@ -19,6 +19,8 @@ export class RxSimple {
 		var s2 = Rx.Observable.range(1,10);
 		var s3 = Rx.Observable.zip(s1, s2, (v1,v2) => [v1,v2]);
 		
-		s3.subscribe(v => console.log(v));
+		//s3.subscribe(v => console.log(v));
+		var x = s3.subscribe();
+		console.log(x);
 	}
 }
