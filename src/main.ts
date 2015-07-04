@@ -4,6 +4,7 @@ import {RxTimers} from './RxTimers';
 import {RxNodeEvents} from './RxNodeEvents';
 import {RxPromise} from './RxPromise';
 import {RxBackpressure} from './RxBackpressure';
+import {RxSubject} from './RxSubject';
 
 //var dumper = new RxDumper();
 //dumper.dumpRx();
@@ -36,4 +37,8 @@ var backpressure = new RxBackpressure();
 //backpressure.throttle();
 //backpressure.generate();	//stackoverflow exception
 //backpressure.sample();
-backpressure.bufferWithCount();
+//backpressure.bufferWithCount();
+
+var subject = new RxSubject();
+//subject.simple();
+subject.asRelay();
