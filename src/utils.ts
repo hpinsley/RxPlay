@@ -1,12 +1,14 @@
 import Rx = require('rx');
 
-export function CreateDumpingObserver() {
+export function CreateDumpingObserver(name:string = '(anon)') {
 	
 	var observer = Rx.Observer.create(
 		
-		(v) => { console.log(v); },
-		(error) => { console.log("error", error); },
-		() => { console.log("done"); }
+		(v) => { console.log(name, v); },
+		(error) => { 
+			console.log(name, "error", error); 
+		},
+		() => { console.log(name, "done"); }
 	);
 	
 	return observer;

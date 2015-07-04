@@ -20,7 +20,9 @@ gulp.task('compile', function() {
     var tsResult = gulp.src(files, {base: './'})
         .pipe($.print())
         .pipe($.typescript(options));
-        
+    
+    //console.log(tsResult);
+       
     return tsResult.js
         .pipe(gulp.dest('.'));
 });
